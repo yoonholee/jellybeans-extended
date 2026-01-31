@@ -2,16 +2,22 @@
 
 A dark theme based on [jellybeans.vim](https://github.com/nanotech/jellybeans.vim) with extended UI coverage.
 
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/YoonhoLee.jellybeans-extended?label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=YoonhoLee.jellybeans-extended)
+
 ## Installation
 
-### Option 1: Install from VSIX (Recommended)
+### Option 1: VS Code Marketplace (Recommended)
+
+Install directly from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=YoonhoLee.jellybeans-extended) or search "Jellybeans Extended" in the Extensions panel.
+
+### Option 2: Install from VSIX
 
 1. Download the latest `.vsix` file from [Releases](../../releases)
 2. In VS Code/Cursor: `Cmd+Shift+P` → "Extensions: Install from VSIX..."
 3. Select the downloaded `.vsix` file
 4. Reload and select the theme: `Cmd+K Cmd+T` → "Jellybeans Extended"
 
-### Option 2: Manual Installation
+### Option 3: Manual Installation
 
 1. Clone this repo into your extensions folder:
    ```bash
@@ -24,7 +30,7 @@ A dark theme based on [jellybeans.vim](https://github.com/nanotech/jellybeans.vi
 2. Reload the editor
 3. Select the theme: `Cmd+K Cmd+T` → "Jellybeans Extended"
 
-### Option 3: Build VSIX Yourself
+### Option 4: Build VSIX Yourself
 
 ```bash
 npm install -g @vscode/vsce
