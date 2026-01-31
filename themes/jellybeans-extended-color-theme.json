@@ -18,6 +18,8 @@
     "editor.findMatchBackground": "#fad07a40",
     "editor.findMatchHighlightBackground": "#fad07a25",
     "editor.findMatchBorder": "#fad07a",
+    "editor.linkedEditingBackground": "#8197BF30",
+    "editor.foldBackground": "#1c1c1c80",
     "editor.hoverHighlightBackground": "#2e2e2e60",
     "editor.rangeHighlightBackground": "#1c1c1c",
     "editorCursor.foreground": "#b2dfd1",
@@ -37,6 +39,16 @@
     "editorBracketHighlight.foreground4": "#cf6a4c",
     "editorBracketHighlight.foreground5": "#fabb6e",
     "editorBracketHighlight.foreground6": "#b267e6",
+
+    // Bracket pair guides (vertical lines)
+    "editorBracketPairGuide.activeBackground1": "#fad07a50",
+    "editorBracketPairGuide.activeBackground2": "#8197BF50",
+    "editorBracketPairGuide.activeBackground3": "#99ad6a50",
+    "editorBracketPairGuide.activeBackground4": "#cf6a4c50",
+    "editorBracketPairGuide.background1": "#fad07a25",
+    "editorBracketPairGuide.background2": "#8197BF25",
+    "editorBracketPairGuide.background3": "#99ad6a25",
+    "editorBracketPairGuide.background4": "#cf6a4c25",
 
     // ==========================================================================
     // Editor Gutter
@@ -299,8 +311,8 @@
     "terminal.ansiBrightBlue": "#91a7cf",
     "terminal.ansiMagenta": "#b267e6",
     "terminal.ansiBrightMagenta": "#c277f6",
-    "terminal.ansiCyan": "#6796e6",
-    "terminal.ansiBrightCyan": "#77a6f6",
+    "terminal.ansiCyan": "#8fbfdc",
+    "terminal.ansiBrightCyan": "#9fcfec",
     "terminal.selectionBackground": "#2e2e2e",
     "terminalCursor.foreground": "#b2dfd1",
     "terminalCursor.background": "#151515",
@@ -452,17 +464,25 @@
     "editorWarning.foreground": "#fad07a",
     "editorInfo.foreground": "#8197BF",
     "editorHint.foreground": "#99ad6a",
+    "editorUnnecessaryCode.opacity": "#00000077",
     "editorError.border": "#00000000",
     "editorWarning.border": "#00000000",
     "editorInfo.border": "#00000000",
 
     // ==========================================================================
-    // Inlay Hints
+    // Inlay Hints & CodeLens
     // ==========================================================================
     "editorInlayHint.background": "#252525",
     "editorInlayHint.foreground": "#888888",
     "editorInlayHint.typeForeground": "#8197BF80",
     "editorInlayHint.parameterForeground": "#fad07a80",
+    "editorCodeLens.foreground": "#888888",
+
+    // ==========================================================================
+    // Unicode Highlight
+    // ==========================================================================
+    "editorUnicodeHighlight.border": "#fad07a",
+    "editorUnicodeHighlight.background": "#fad07a20",
 
     // ==========================================================================
     // Lightbulb
@@ -657,13 +677,30 @@
     "regexp": "#cf6a4c",
     "operator": "#ffe2a9",
     "decorator": "#fad07a",
+    // Modifiers
+    "*.deprecated": { "foreground": "#888888", "fontStyle": "strikethrough" },
+    "*.static": { "fontStyle": "underline" },
+    "function.async": { "foreground": "#fad07a", "fontStyle": "italic" },
+    "method.async": { "foreground": "#fad07a", "fontStyle": "italic" },
+    "typeParameter": "#b267e6",
+    // Declarations (distinguish definition from use)
+    "variable.declaration": "#b267e6",
+    "parameter.declaration": { "foreground": "#ddddc1", "fontStyle": "italic" },
+    "property.declaration": "#ddddc1",
+    // Rust semantic tokens
+    "macro:rust": "#6796e6",
+    "lifetime:rust": { "foreground": "#b267e6", "fontStyle": "italic" },
+    "attribute:rust": { "foreground": "#fad07a", "fontStyle": "italic" },
     // Python-specific: self/cls parameters
     "selfParameter:python": { "foreground": "#8197BF", "italic": true },
     "clsParameter:python": { "foreground": "#8197BF", "italic": true },
     // Type hints - dimmed and italic to reduce visual noise
     "*.typeHint:python": { "foreground": "#888888", "italic": true },
     "class.typeHint:python": { "foreground": "#888888", "italic": true },
-    "type.typeHint:python": { "foreground": "#888888", "italic": true }
+    "type.typeHint:python": { "foreground": "#888888", "italic": true },
+    // TypeScript/JavaScript-specific
+    "variable.readonly:typescript": { "foreground": "#b8c8c8", "fontStyle": "italic" },
+    "variable.readonly:javascript": { "foreground": "#b8c8c8", "fontStyle": "italic" }
   },
 
   // ============================================================================
@@ -729,6 +766,14 @@
       ],
       "settings": {
         "foreground": "#8197BF"
+      }
+    },
+    {
+      "name": "Keyword: new (bold)",
+      "scope": "keyword.operator.new",
+      "settings": {
+        "foreground": "#8197BF",
+        "fontStyle": "bold"
       }
     },
     {
@@ -1001,13 +1046,18 @@
       }
     },
     {
-      "name": "HTML: Attribute Names",
+      "name": "HTML/JSX: Attribute Names",
       "scope": [
         "meta.tag entity.other.attribute-name",
-        "entity.other.attribute-name.html"
+        "entity.other.attribute-name.html",
+        "entity.other.attribute-name.js",
+        "entity.other.attribute-name.ts",
+        "entity.other.attribute-name.jsx",
+        "entity.other.attribute-name.tsx"
       ],
       "settings": {
-        "foreground": "#8197BF"
+        "foreground": "#8197BF",
+        "fontStyle": "italic"
       }
     },
     {
@@ -1114,6 +1164,17 @@
       ],
       "settings": {
         "foreground": "#fabb6e"
+      }
+    },
+    {
+      "name": "JSDoc: param names",
+      "scope": [
+        "variable.other.jsdoc",
+        "comment.block.documentation variable.other"
+      ],
+      "settings": {
+        "foreground": "#ddddc1",
+        "fontStyle": "italic"
       }
     },
 
