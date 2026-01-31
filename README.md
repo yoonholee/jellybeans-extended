@@ -38,6 +38,23 @@ vsce package
 # Generates jellybeans-extended-x.x.x.vsix
 ```
 
+## Screenshots
+
+### Python
+![Python](screenshots/python.png)
+
+### TypeScript
+![TypeScript](screenshots/typescript.png)
+
+### React/TSX
+![React](screenshots/react.png)
+
+### Markdown
+![Markdown](screenshots/markdown.png)
+
+### YAML
+![YAML](screenshots/config.png)
+
 ## Features
 
 - Full UI theming (activity bar, sidebar, tabs, terminal, etc.)

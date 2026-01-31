@@ -1,0 +1,42 @@
+# Application Configuration
+app:
+  name: "Jellybeans Demo"
+  version: "1.0.0"
+  debug: false
+
+server:
+  host: "0.0.0.0"
+  port: 8080
+  ssl:
+    enabled: true
+    cert_path: /etc/ssl/certs/app.crt
+
+database:
+  driver: postgresql
+  connection: &db_conn
+    host: localhost
+    port: 5432
+    name: myapp
+    pool_size: 10
+
+  replicas:
+    - <<: *db_conn
+      host: replica-1.db.local
+    - <<: *db_conn
+      host: replica-2.db.local
+
+features:
+  - name: dark_mode
+    enabled: true
+    rollout: 100
+
+  - name: new_dashboard
+    enabled: false
+    rollout: 25
+
+logging:
+  level: info
+  format: json
+  outputs:
+    - stdout
+    - file:///var/log/app.log
