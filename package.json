@@ -4,6 +4,10 @@
   "description": "Jellybeans theme with extended UI coverage and markdown support",
   "version": "1.0.0",
   "publisher": "YoonhoLee",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoonholee/jellybeans-extended"
+  },
   "engines": {
     "vscode": "^1.60.0"
   },
