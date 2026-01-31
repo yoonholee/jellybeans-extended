@@ -880,6 +880,43 @@
       }
     },
     {
+      "name": "Python magic/dunder methods",
+      "scope": "support.function.magic.python",
+      "settings": {
+        "foreground": "#8fbfdc",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Python magic variables",
+      "scope": "support.variable.magic.python",
+      "settings": {
+        "foreground": "#cf6a4c"
+      }
+    },
+    {
+      "name": "Python builtins",
+      "scope": "support.function.builtin.python",
+      "settings": {
+        "foreground": "#fabb6e"
+      }
+    },
+    {
+      "name": "Python exception types",
+      "scope": "support.type.exception.python",
+      "settings": {
+        "foreground": "#cf6a4c"
+      }
+    },
+    {
+      "name": "Python string prefixes (f, r, b)",
+      "scope": "storage.type.string.python",
+      "settings": {
+        "foreground": "#99ad6a",
+        "fontStyle": "italic"
+      }
+    },
+    {
       "name": "Python f-string braces",
       "scope": [
         "punctuation.definition.template-expression.begin.python",
