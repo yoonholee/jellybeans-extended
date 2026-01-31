@@ -1,0 +1,20 @@
+{
+  "name": "jellybeans-extended",
+  "displayName": "Jellybeans Extended",
+  "description": "Jellybeans theme with extended UI coverage and markdown support",
+  "version": "1.0.0",
+  "publisher": "YoonhoLee",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Jellybeans Extended",
+        "uiTheme": "vs-dark",
+        "path": "./themes/jellybeans-extended-color-theme.json"
+      }
+    ]
+  }
+}
